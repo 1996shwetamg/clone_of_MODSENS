@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home page</title>
+    <title>FASHION(get your choice)</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <style>
         *{
             margin:0;
@@ -24,8 +26,9 @@
         }
        .cont{
         width:100%; 
-        margin-top:30px;
+        margin-top:20px;
         display: flex;
+        padding-top:20px;
         align-items: baseline;
         justify-content: center;
        }
@@ -37,58 +40,13 @@
        .swiper-slide img{
        width:100%;
        }
-       .cont1{
-        width:100%; 
-        margin-top:30px;
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-       }
-       .swiper1{
-        width:70%;
-        height: fit-content;
-
-       }
-        
-          nav{
-            width:100%;
-            height:10%;
-            background-color:white ;
-            overflow: auto;
-          
-          }
-          nav a{
-            width:100px;
-            height:50px;
-            display: block;
-            padding-right:10px;
-            text-decoration:none;
-            font-size: small;
-          }
-          ul{
-            padding:0;
-            margin:0 0 0 150px;
-            list-style:none ;
-          }
-          li{
-          float:left;
-          }
          #sale{
             color:red;
          }
        #gift{
         color:red;
        }
-       #brands{
-       display:grid;
-       grid-template-columns: repeat(6,1fr);
-       gap:10px;
-       width:70%;
-       margin:auto;
-       }
-       #brands img{
-        width:100%;
-       }
+       
        #featured{
         text-align: center;
        }
@@ -165,51 +123,166 @@
       grid-template-columns: repeat(4,1fr);
       margin:auto;
       width:70%;
+      margin-bottom: 20px;
     }
     #community img{
       width:100%;
     }
     #posts{
-text-align: center;
+   text-align: center;
     }
     #install{
       display: grid;
       grid-template-columns: repeat(2,1fr);
-      width: 100%;
+      width: 70%;
       margin:auto;
-      margin-top: 30px;
-      gap:20px;
-      height: 100vh;
+      margin-top: 20px;
+      gap:10px;
       background-color: rgb(250, 250, 243);
       text-align: center;
     }
+    .mobile img{
+    width:100%;
+    height:50vh;
+    }
+   .container{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-between;
+   }
+   nav ul li{
+  list-style: none;
+    padding: 0 12px;
+   }
+   .flex{
+    display:flex;
+    text-decoration:null;
+   }
+   .left-flex img{
+   width:60px;
+    height:60px;
+   }
+   .left-flex{
+    display: flex;
+   justify-content: space-between;
+   }
+   .right-flex{
+   justify-content: end;
+   }
+   .right-flex img{
+   width:20px;
+   height:20px;
+   }
+   .bottom{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+   justify-content: center;
+   gap:100px;
+   padding-top: 20px;
+   color: gray;
+   }
    
+   .bottom ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    color: rgb(83, 81, 81);
+    gap:5px;
+   }
+   .bottom ul li{
+    list-style: none;
+   }
+   .bottom p:hover{
+    text-decoration: underline;
+   }
+   hr{
+    width:100%;
+    height: 1px;
+margin-top: 20px;
+
+   }
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+            #install{
+              grid-template-columns: repeat(1,1fr);
+            }
+           #community{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #newsale{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #women{
+            grid-template-columns: repeat(6,1fr);
+           }
+        }
+        @media screen and (min-width: 400px) and (max-width: 600px) {
+          #women{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #install{
+              grid-template-columns: repeat(1,1fr);
+            }
+           #community{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #newsale{
+            grid-template-columns: repeat(4,1fr);
+           }
+        }
+        @media screen and (min-width: 0px) and (max-width: 400px) {
+          #women{
+            grid-template-columns: repeat(3,1fr);
+           }
+           #install{
+              grid-template-columns: repeat(1,1fr);
+            }
+           #community{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #newsale{
+            grid-template-columns: repeat(4,1fr);
+           }
+        }
     </style>
 </head>
 <body>
     <div id="header">
         <h4>IT'S SALE SEASON.The best deals from 500+ retailers.</h4>
-        <a href="home.html">JOIN NOW</a>
+        <a href="index.html">JOIN NOW</a>
     </div>
-    <!-- <div id="logo">
-        <a href="#"><img src="C:\Users\1996s\Downloads\Grey Aesthetic Watercolor Creative Logo.png" alt=""></a>
-    </div> -->
-    <nav class="navbar">
-        <ul>
-        
-        <li><a href="#">WOMEN</a></li>
-        <li><a href="#">MEN</a></li>
-        <li><a href="#">BEAUTY</a></li>
-        <li><a href="#">KIDS</a></li>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">DESIGNERS</a></li>
-        <li><a href="#">COMMUNITY</a></li>
-        <li><a href="#">WHY FASHION</a></li>
-        <li><a id="sale"href="#">SALE</a></li>
-        <li><a id="gift"href="#">GIFT GUIDE</a></li>
-        <li><a href="#">BASKET</a></li>
-    </ul>
-    </nav> 
+    <header>
+    <nav class="container">
+        <div class="left-flex">
+        <img src="C:\Users\1996s\Downloads\Grey Aesthetic Watercolor Creative Logo.png" alt="">
+        <ul class="flex">
+        <li><a href="women.html">WOMEN</li></a>
+        <li><a href="#">MEN</li></a>
+        <li><a href="#">BEAUTY</li></a>
+        <li><a href="#">KIDS</li></a>
+        <li><a href="#">HOME</li></a>
+        <li><a href="#">DESIGNERS</li></a>
+        <li><a href="#">COMMUNITY</li></a>
+        <li><a href="#">WHY FASHION</li></a>
+        <li id="sale"><a href="#">SALE</li></a>
+        <li id="gift"><a href="#">GIFT GUIDE</li></a>
+        <li><a href="#">BASKET</li></a>
+    </ul> 
+  </div>
+    <div class="right-flex">
+      <ul class="flex">
+        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/206/206626.png" alt=""></li></a>
+        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1656/1656850.png" alt=""></li></a>
+        <li id="user"><a href="signup.html"><img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></li></a>
+        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2811/2811806.png" alt=""></li></a>
+      </ul>
+      
+      
+    </div>
+ 
+</nav>
+    </header>
     <div class="cont">
       <div class="swiper">
         <!-- Additional required wrapper -->
@@ -335,26 +408,30 @@ text-align: center;
       </div>
     <div>
       <h1 style="text-align: center; padding-top: 10px;">Special Offers</h1>
-      <div>
-        <img src="" alt="">
-        <h2></h2>
-        <p></p>
-        <button></button>
-      </div>
-      <div>
-        <img src="" alt="">
-        <h2></h2>
-        <p></p>
-        <button></button>
-      </div>
-      <div>
-        <img src="" alt="">
-        <h2></h2>
-        <p></p>
-        <button></button>
-      </div>
-    </div>
+      <div class="cont">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15.png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (5).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (6).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (2).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (1).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (2).png" alt=""></div>
 
+            
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+          
+        </div>
+      </div>
     <div>
       <h1 style="text-align: center;">Trending Now</h1>
       <div class="cont">
@@ -380,7 +457,7 @@ text-align: center;
     </div>
 
     <div id="posts">
-      <h1 style="text-align: center; padding-bottom: 10px;">Community Posts</h1>
+      <h1 style="text-align: center; padding:10px 10px;">Community Posts</h1><br>
       <div id="community">
       <div>
       <img src="https://cdn.modesens.com/umedia/1707018s?w=400" alt="">
@@ -399,35 +476,78 @@ text-align: center;
     </div>
 
     <div id="install">
-      <div>
+      <div class="mobile">
         
-        <h1>Download the
-          ModeSens App</h1>
-        <p>A seamless experience that takes your style
-          to the next level.</p>
-        <button style="background-color: black; color: white; font-weight: bold;">DOWNLOAD NOW</button>
+        <h1>Download the<br>ModeSens App</h1>
+        <p>A seamless experience that takes your style to the next level.</p>
+        <button style="background-color: black; color: white; font-weight: bold;">DOWNLOAD NOW</button><br><br>
         <img src="https://cdn.modesens.com/static/img/20220826appdownload_en.svg" alt="">
       </div>
-      <div>
+      <div class="mobile">
        
-        <h1>Install the ModeSens
-          Browser Extension</h1>
-        <p>Get timely, accurate product information
-          every time you browse.</p>
-        <button style="background-color: black; color: white; font-weight: bold;">INSTALL NOW</button>
+        <h1>Install the ModeSens<br> Browser Extension</h1>
+        <p>Get timely, accurate product information every time you browse.</p>
+        <button style="background-color: black; color: white; font-weight: bold;">INSTALL NOW</button><br><br>
         <img src="https://cdn.modesens.com/static/img/20211109downloadright.png" alt="">
       </div>
 
     </div>
-
-    <div class="footer">
-      <div class="footer-content"></div>
-      <div class="footer-bottom"></div>
+<hr>
+    <div class="bottom">
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">CUSTOMER CARE</p><br><br>
+      <p>Shopper Protection</p>
+      <p>Loyalty Program</p>
+      <p>Help Center</p>
+      <p>Size Guides</p>
+      <p>Contact Us / Feedback</p>
+      <p>Shipping / Returns</p>
+     </div>
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">INFORMATION</p><br><br>
+      <p>About Us</p>
+      <p>Influencer Program</p>
+      <p>Partner Stores</p>
+      <p>Sitemap</p>
+     </div>
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">LEGAL</p><br><br>
+      <p>Terms Of Use</p>
+      <p>Disclosure</p>
+      <p>Privacy Policy</p>
+      <p>Community Guidelines</p>
+     </div>
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">CONNECT WITH US</p><br><br>
+      <div style="display:flex;flex-direction: row;">
+        <img src="https://cdn.modesens.com/static/img/20220815download_ios.svg" alt="">
+       <img src="https://cdn.modesens.com/static/img/20220815download_android.svg" alt="">
+       <img src="https://cdn.modesens.com/static/img/20220815down_chromestrore.svg" alt="">
+      </div>
+     </div>
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">NEWSLETTER SIGN UP</p><br><br>
+      <input type="email" placeholder="Email Adress">
+    <ul style="display:flex;flex-direction: row;">
+    <li>Women's</li>
+    <li>Men's</li>
+    <button>SUBMIT</button>
+    </ul> 
     </div>
+  </div>
+  
+    <p style="text-align: center;color: gray;background-color:white">When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</p>
+    <br><br>
+    <hr>
+    <div>
+
+    </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
+
       const swiper = new Swiper('.swiper',{
      autoplay:{
       delay:5000,
@@ -450,10 +570,8 @@ text-align: center;
 
 });
 
-
-
-
-
     </script>
+    
 </body>
+<script src="/home.js"></script>
 </html>

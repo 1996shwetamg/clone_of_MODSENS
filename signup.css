@@ -1,0 +1,27 @@
+.signup{
+    background-color: antiquewhite;
+    width:50%;
+    height:500px;
+    border: 1px solid black;
+    margin:auto;
+    text-align: center;
+}
+input{
+    height:50px;
+    width:200px;
+    font-size: x-large;
+}
+a{
+    font-size: x-large;
+}
+#submit{
+    background-color: black;
+    color: white;
+
+}
+#submit:hover{
+    background-color: rgb(42, 40, 40);
+}
+a:hover{
+    color: rgb(216, 22, 22);
+}
