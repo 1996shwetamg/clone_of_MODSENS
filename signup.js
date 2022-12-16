@@ -1,5 +1,5 @@
 let myform=document.getElementById("form");
-
+let submit=document.getElementById("submit");
 let data=JSON.parse(localStorage.getItem("userdata"))||[]
 myform.addEventListener("submit",(event)=>{
     event.preventDefault();
@@ -10,4 +10,8 @@ myform.addEventListener("submit",(event)=>{
     
     data.push(obj);
     localStorage.setItem("userdata",JSON.stringify(data));
+})
+
+submit.addEventListener("click",()=>{
+    window.location.href="signin.html"
 })

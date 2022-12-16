@@ -14,14 +14,23 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .end{
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+        }
+        .end img{
+        width:30px;
+        height:30px;
+        }
         #header{
             background-color: rgb(224, 46, 33);
             color: white;
-          margin:auto;
+            margin:auto;
             width:100%;
             text-align: center;
         }
-       #header a{
+        #header a{
             color:white
         }
        .cont{
@@ -114,7 +123,21 @@
       margin-top: 20px;
      
      }
+     .offer{
+      text-align: center;
+     }
+     .offer #btn{
+      margin-top: 20px;
+      font-size: large;
+     }
     #new button{
+      margin-top: 20px;
+      font-size: large;
+    }
+    .trending{
+      text-align: center;
+    }
+    .trending button{
       margin-top: 20px;
       font-size: large;
     }
@@ -150,6 +173,10 @@
     flex-direction: row;
     width:100%;
     justify-content: space-between;
+   
+   }
+   .container a{
+    text-decoration-line: none;
    }
    nav ul li{
   list-style: none;
@@ -163,6 +190,7 @@
    width:60px;
     height:60px;
    }
+   
    .left-flex{
     display: flex;
    justify-content: space-between;
@@ -200,9 +228,46 @@
    hr{
     width:100%;
     height: 1px;
-margin-top: 20px;
+    margin-top: 20px;
+   }
+   .active:hover .submenu1{
+      display: block;
+     position: absolute;
+    background-color:white;
+    
+   }
+   .submenu1{
+  display:none;
 
    }
+   .submenu1 ul{
+    display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+   }
+   li:hover{
+    text-decoration-line: underline;
+    
+   }
+   .home{
+    display:none;
+   }
+   .homediv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    gap:20px;
+   }
+   .active:hover .home{
+    display: block;
+    position: fixed;
+   visibility: visible;
+    background-color:white;
+    
+   }
+
+
+  
     @media screen and (min-width: 600px) and (max-width: 800px) {
             #install{
               grid-template-columns: repeat(1,1fr);
@@ -257,28 +322,114 @@ margin-top: 20px;
         <div class="left-flex">
         <img src="C:\Users\1996s\Downloads\Grey Aesthetic Watercolor Creative Logo.png" alt="">
         <ul class="flex">
-        <li><a href="women.html">WOMEN</li></a>
-        <li><a href="#">MEN</li></a>
-        <li><a href="#">BEAUTY</li></a>
-        <li><a href="#">KIDS</li></a>
-        <li><a href="#">HOME</li></a>
-        <li><a href="#">DESIGNERS</li></a>
-        <li><a href="#">COMMUNITY</li></a>
-        <li><a href="#">WHY FASHION</li></a>
-        <li id="sale"><a href="#">SALE</li></a>
-        <li id="gift"><a href="#">GIFT GUIDE</li></a>
-        <li><a href="#">BASKET</li></a>
+        <li class="active"><a href="women.html">WOMEN</a>
+        <div class="submenu1">
+          <hr style="width:100%; height: 1px; color: black;">
+          <ul>
+            <li><a href="#">SHOP ALL</a></li>
+            <li><a href="#">CLOTHING</a></li>
+            <li><a href="#">BAGS</a></li>
+            <li><a href="#">SHOES</a></li>
+            <li><a href="#">ACCESSORIES</a></li>
+            <li><a href="#">BEAUTY</a></li>
+            <li><a id="sale"href="#">SALE</a></li>
+            <li><a href="#">PRE-OWNED</a></li>
+            <li><a href="#">OCCASION</a></li>
+          </ul>
+       <hr>
+        </div>
+        </li>
+        <li class="active"><a href="#">MEN</a>
+          <div class="submenu1">
+            <hr style="width: 100%; height: 1px; color: black;">
+            <ul>
+              <li><a href="#">SHOP ALL</a></li>
+              <li><a href="#">CLOTHING</a></li>
+              <li><a href="#">BAGS</a></li>
+              <li><a href="#">SHOES</a></li>
+              <li><a href="#">ACCESSORIES</a></li>
+              <li><a href="#">GROOMING</a></li>
+              <li><a id="sale"href="#">SALE</a></li>
+              <li><a href="#">PRE-OWNED</a></li>
+              <li><a href="#">OCCASION</a></li>
+            </ul>
+         <hr>
+          </div></li>
+        <li class="active"><a href="#">BEAUTY</a>
+          <div class="submenu1">
+            <hr style="width: 100%; height: 1px; color: black;">
+            <ul>
+              <li><a href="#">SHOP ALL</a></li>
+              <li><a href="#">WOMEN'S BEAUTY</a></li>
+              <li><a href="#">MEN'S GROOMING</a></li>
+              <li><a href="#">KID'S CARE</a></li>
+              <li><a id="sale"href="#">SALE</a></li>  
+            </ul>
+         <hr>
+          </div>
+        </li>
+        <li CLASS="active"><a href="#">KIDS</a>
+          <div class="submenu1">
+            <hr style="width: 100%; height: 1px; color: black;">
+            <ul>
+              <li><a href="#">SHOP ALL</a></li>
+              <li><a href="#">BABY GIRL'S</a></li>
+              <li><a href="#">BABY BOY'S</a></li>
+              <li><a href="#">GIRLS</a></li>
+              <li><a href="#">BOYS</a></li>
+              <li><a id="sale"href="#">SALE</a></li>  
+            </ul>
+         <hr>
+          </div></li>
+        <li  class="active"><a href="#">HOME</a>
+        <div class="home">
+          <div  class="homediv">
+          <div>
+            <p style="color: gray;">SHOP BY CATEGORY</p>
+            <p>NEW ARRIVAL</p><br>
+            <p>SHOP ALL</p><br>
+            <p>BATH</p><br>
+            <p>BED</p><br>
+            <p>FURNITURE</p><br>
+            <p>HOME DECOR</p><br>
+            <p>KITCHEN AND DINING</p><br>
+            <p>PET ACCESSORIES</p><br>
+          </div>
+          <div>
+            <p>TECHNOLOGY</p><br>
+            <p>SALE</p><br>
+          </div>
+          <div>
+            <P>DESIGNERS</P><br>
+            <P>GUCCI</P><br>
+            <P>VERSACE</P><br>
+            <P>VITRA</P><br>
+            <P>HAY</P><br>
+            <P>OFF WHITE</P><br> 
+          </div>
+          <div>
+            <P>POPULAR CATEGORY</P>
+            <P>TECHNOLOGY</P>
+           <img style="width: 50px;height:50px;" src="https://modesens.com/banner/9368/getimg/?img=%2Fbanner%2F20210816Home-Technology-Nav.jpg" alt="">
+          </div>
+        </div>
+      </div>
+        </li>
+        <li><a href="#">DESIGNERS</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+        <li><a href="#">WHY FASHION</a></li>
+        <li><a id="sale" href="#">SALE</a></li>
+        <li><a  id="gift" href="#">GIFT GUIDE</a></li>
+        <li><a href="#">BASKET</a></li>
     </ul> 
   </div>
     <div class="right-flex">
       <ul class="flex">
         <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/206/206626.png" alt=""></li></a>
-        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1656/1656850.png" alt=""></li></a>
+        <li><a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/1656/1656850.png" alt=""></li></a>
         <li id="user"><a href="signup.html"><img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></li></a>
         <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2811/2811806.png" alt=""></li></a>
       </ul>
-      
-      
     </div>
  
 </nav>
@@ -329,7 +480,7 @@ margin-top: 20px;
           </div>
         </div>
     </div>
-
+<hr>
     <div>
       <h1 id="shop-women">Shop Women</h1>
       <div id="women">
@@ -370,7 +521,7 @@ margin-top: 20px;
         <p>PRE-OWNED</p>
        </div>
       </div>
-
+   <hr>
       <div id="new">
         <h1 style="text-align: center;">New To Sale</h1>
         <div id="newsale">
@@ -403,11 +554,13 @@ margin-top: 20px;
           <p class="line3">$550(45% OFF) <span class="rate">-$1090</span></p>
           <p class="line4">Compare 4 Stores</p>
           </div>
-        </div>
+        </div><br>
         <button id="btn">show more</button>
       </div>
+      <hr>
     <div>
       <h1 style="text-align: center; padding-top: 10px;">Special Offers</h1>
+      <div class="offer">
       <div class="cont">
         <div class="swiper">
           <!-- Additional required wrapper -->
@@ -420,7 +573,8 @@ margin-top: 20px;
             <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (1).png" alt=""></div>
             <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (2).png" alt=""></div>
 
-            
+          </div>
+          <button id="btn">show more</button>
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
@@ -432,7 +586,9 @@ margin-top: 20px;
           
         </div>
       </div>
-    <div>
+
+      <hr>
+    <div class="trending">
       <h1 style="text-align: center;">Trending Now</h1>
       <div class="cont">
         <div class="swiper">
@@ -454,8 +610,9 @@ margin-top: 20px;
           
         </div>
       </div>
+      <button>show more</button>
     </div>
-
+<hr>
     <div id="posts">
       <h1 style="text-align: center; padding:10px 10px;">Community Posts</h1><br>
       <div id="community">
@@ -537,13 +694,22 @@ margin-top: 20px;
   </div>
   
     <p style="text-align: center;color: gray;background-color:white">When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</p>
-    <br><br>
+    
     <hr>
-    <div>
 
-    </div>
+    <div class="end">
+<div><img src="https://cdn.modesens.com/static/img/20220726Pinterest.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Twitter.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Ins.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Facebook.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Weibo.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Wechat.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Reddit.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Discord.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220811Xiaohongshu.svg" alt=""></div>
+</div>
 
-    </div>
+    </div><br>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
@@ -573,5 +739,5 @@ margin-top: 20px;
     </script>
     
 </body>
-<script src="/home.js"></script>
+
 </html>
