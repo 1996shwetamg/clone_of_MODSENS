@@ -1,0 +1,26 @@
+#wishlist-container{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:auto;
+    text-align: center;
+     
+}
+#wishlist-container div img{
+width:200px;
+height:300px;
+
+}
+.payment{
+    text-align:center ;
+    margin-bottom: 20px;
+}
+.payment button{
+    text-align: center;
+    font-size:xx-large;
+    background-color: #27ae60;
+}
+.payment button:hover{
+background-color: #2ecc71;
+
+}

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASHION(get your choice)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .end{
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+        }
+        .end img{
+        width:30px;
+        height:30px;
+        }
+        #header{
+            background-color: rgb(224, 46, 33);
+            color: white;
+            margin:auto;
+            width:100%;
+            text-align: center;
+        }
+        #header a{
+            color:white
+        }
+       .cont{
+        width:100%; 
+        margin-top:20px;
+        display: flex;
+        padding-top:20px;
+        align-items: baseline;
+        justify-content: center;
+       }
+       .swiper{
+        width:70%;
+        height: fit-content;
+
+       }
+       .swiper-slide img{
+       width:100%;
+       }
+         #sale{
+            color:red;
+         }
+       #gift{
+        color:red;
+       }
+       
+       #featured{
+        text-align: center;
+       }
+       #featured p{
+        color:rgb(77,73,73);
+        font-size: x-large;
+       }
+     #women{
+      display:grid;
+       grid-template-columns: repeat(9,1fr);
+       gap:30px;
+       width:70%;
+       margin:auto;
+       text-align: center;
+       margin-top:20px;
+     }
+     #women img{
+      border-radius: 100px;
+      width:90px;
+     }
+     #shop-women{
+    text-align:center;
+    
+    
+    margin:20px auto;
+    
+
+     }
+    
+     .line1{
+    color:black;
+    padding-bottom: 5px;
+     }
+     .line2{
+    color:rgb(77, 73, 73);
+    font-size: small;
+    padding-bottom: 5px;
+     }
+     .line3{
+    color:rgb(146, 39, 39);
+    
+    padding-bottom: 5px;
+     }
+     .line4{
+    color:rgb(77, 73, 73);
+    padding-bottom: 5px;
+     }
+     .rate{
+      color:black;
+     }
+     #newsale{
+      display:grid;
+      margin:auto;
+      width:70%;
+      grid-template-columns: repeat(4,1fr);
+      gap:40px;
+      margin-top:20px;
+     }
+     #newsale img{
+      width:100%;
+      height: 70%;
+     }
+     #new{
+      text-align: center;
+      margin-top: 20px;
+     
+     }
+     .offer{
+      text-align: center;
+     }
+     .offer #btn{
+      margin-top: 20px;
+      font-size: large;
+     }
+    #new button{
+      margin-top: 20px;
+      font-size: large;
+    }
+    .trending{
+      text-align: center;
+    }
+    .trending button{
+      margin-top: 20px;
+      font-size: large;
+    }
+    #community{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      margin:auto;
+      width:70%;
+      margin-bottom: 20px;
+    }
+    #community img{
+      width:100%;
+    }
+    #posts{
+   text-align: center;
+    }
+    #install{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      width: 70%;
+      margin:auto;
+      margin-top: 20px;
+      gap:10px;
+      background-color: rgb(250, 250, 243);
+      text-align: center;
+    }
+    .mobile img{
+    width:100%;
+    height:50vh;
+    }
+   .container{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-between;
+   
+   }
+   .container a{
+    text-decoration-line: none;
+   }
+   nav ul li{
+  list-style: none;
+    padding: 0 12px;
+   }
+   .flex{
+    display:flex;
+    text-decoration:null;
+   }
+   .left-flex img{
+   width:60px;
+    height:60px;
+   }
+   
+   .left-flex{
+    display: flex;
+   justify-content: space-between;
+   }
+   .right-flex{
+   justify-content: end;
+   }
+   .right-flex img{
+   width:20px;
+   height:20px;
+   }
+   .bottom{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+   justify-content: center;
+   gap:100px;
+   padding-top: 20px;
+   color: gray;
+   }
+   
+   .bottom ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    color: rgb(83, 81, 81);
+    gap:5px;
+   }
+   .bottom ul li{
+    list-style: none;
+   }
+   .bottom p:hover{
+    text-decoration: underline;
+   }
+   hr{
+    width:100%;
+    height: 1px;
+    margin-top: 20px;
+   }
+   .active:hover .submenu1{
+      display: block;
+     position: absolute;
+    background-color:white;
+    
+   }
+   .submenu1{
+  display:none;
+
+   }
+   .submenu1 ul{
+    display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+   }
+   li:hover{
+    text-decoration-line: underline;
+    
+   }
+   .home{
+    display:none;
+   }
+   .homediv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    gap:20px;
+   }
+   .active:hover .home{
+    display: block;
+    position: fixed;
+   visibility: visible;
+    background-color:white;
+    
+   }
+
+
+  
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+            #install{
+              grid-template-columns: repeat(1,1fr);
+            }
+           #community{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #newsale{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #women{
+            grid-template-columns: repeat(6,1fr);
+           }
+        }
+        @media screen and (min-width: 400px) and (max-width: 600px) {
+          #women{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #install{
+              grid-template-columns: repeat(1,1fr);
+            }
+           #community{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #newsale{
+            grid-template-columns: repeat(4,1fr);
+           }
+        }
+        @media screen and (min-width: 0px) and (max-width: 400px) {
+          #women{
+            grid-template-columns: repeat(3,1fr);
+           }
+           #install{
+              grid-template-columns: repeat(1,1fr);
+            }
+           #community{
+            grid-template-columns: repeat(4,1fr);
+           }
+           #newsale{
+            grid-template-columns: repeat(4,1fr);
+           }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h4>IT'S SALE SEASON.The best deals from 500+ retailers.</h4>
+        <a href="women.html">JOIN NOW</a>
+    </div>
+    <header>
+    <nav class="container">
+        <div class="left-flex">
+        <h1 style="color:green;padding-right: 30px;">FASHION</h1>
+        <ul class="flex">
+        <li class="active"><a href="#">WOMEN</a>
+        <div class="submenu1">
+          <hr style="width:100%; height: 1px; color: black;">
+          <ul>
+            <li><a href="#">SHOP ALL</a></li>
+            <li><a href="#">CLOTHING</a></li>
+            <li><a href="#">BAGS</a></li>
+            <li><a href="#">SHOES</a></li>
+            <li><a href="#">ACCESSORIES</a></li>
+            <li><a href="#">BEAUTY</a></li>
+            <li><a id="sale"href="#">SALE</a></li>
+            <li><a href="#">PRE-OWNED</a></li>
+            <li><a href="#">OCCASION</a></li>
+          </ul>
+       <hr>
+        </div>
+        </li>
+        <li class="active"><a href="#">MEN</a>
+          <div class="submenu1">
+            <hr style="width: 100%; height: 1px; color: black;">
+            <ul>
+              <li><a href="#">SHOP ALL</a></li>
+              <li><a href="#">CLOTHING</a></li>
+              <li><a href="#">BAGS</a></li>
+              <li><a href="#">SHOES</a></li>
+              <li><a href="#">ACCESSORIES</a></li>
+              <li><a href="#">GROOMING</a></li>
+              <li><a id="sale"href="#">SALE</a></li>
+              <li><a href="#">PRE-OWNED</a></li>
+              <li><a href="#">OCCASION</a></li>
+            </ul>
+         <hr>
+          </div></li>
+        <li class="active"><a href="#">BEAUTY</a>
+          <div class="submenu1">
+            <hr style="width: 100%; height: 1px; color: black;">
+            <ul>
+              <li><a href="#">SHOP ALL</a></li>
+              <li><a href="#">WOMEN'S BEAUTY</a></li>
+              <li><a href="#">MEN'S GROOMING</a></li>
+              <li><a href="#">KID'S CARE</a></li>
+              <li><a id="sale"href="#">SALE</a></li>  
+            </ul>
+         <hr>
+          </div>
+        </li>
+        <li CLASS="active"><a href="#">KIDS</a>
+          <div class="submenu1">
+            <hr style="width: 100%; height: 1px; color: black;">
+            <ul>
+              <li><a href="#">SHOP ALL</a></li>
+              <li><a href="#">BABY GIRL'S</a></li>
+              <li><a href="#">BABY BOY'S</a></li>
+              <li><a href="#">GIRLS</a></li>
+              <li><a href="#">BOYS</a></li>
+              <li><a id="sale"href="#">SALE</a></li>  
+            </ul>
+         <hr>
+          </div></li>
+        <li  class="active"><a href="women.html">HOME</a>
+        <div class="home">
+          <div  class="homediv">
+          <div>
+            <p style="color: gray;">SHOP BY CATEGORY</p>
+            <p>NEW ARRIVAL</p><br>
+            <p>SHOP ALL</p><br>
+            <p>BATH</p><br>
+            <p>BED</p><br>
+            <p>FURNITURE</p><br>
+            <p>HOME DECOR</p><br>
+            <p>KITCHEN AND DINING</p><br>
+            <p>PET ACCESSORIES</p><br>
+          </div>
+          <div>
+            <p>TECHNOLOGY</p><br>
+            <p>SALE</p><br>
+          </div>
+          <div>
+            <P>DESIGNERS</P><br>
+            <P>GUCCI</P><br>
+            <P>VERSACE</P><br>
+            <P>VITRA</P><br>
+            <P>HAY</P><br>
+            <P>OFF WHITE</P><br> 
+          </div>
+          <div>
+            <P>POPULAR CATEGORY</P>
+            <P>TECHNOLOGY</P>
+           <img style="width: 50px;height:50px;" src="https://modesens.com/banner/9368/getimg/?img=%2Fbanner%2F20210816Home-Technology-Nav.jpg" alt="">
+          </div>
+        </div>
+      </div>
+        </li>
+        <li><a href="#">DESIGNERS</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+        <li><a href="#">WHY FASHION</a></li>
+        <li><a id="sale" href="#">SALE</a></li>
+        <li><a  id="gift" href="#">GIFT GUIDE</a></li>
+        <li><a href="#">BASKET</a></li>
+    </ul> 
+  </div>
+    <div class="right-flex">
+      <ul class="flex">
+        <li><a href="wishlist.html"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt=""></a></li>
+        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/206/206626.png" alt=""></li></a>
+        <li><a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/1656/1656850.png" alt=""></li></a>
+        <li id="user"><a href="signup.html"><img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></li></a>
+        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2811/2811806.png" alt=""></li></a>
+      </ul>
+    </div>
+ 
+</nav>
+    </header>
+    <div class="cont">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="https://modesens.com/banner/14401/getimg/?img=%2Fbanner%2F20221212-modesens-HolidaySale-1140x400-EN_1670831157.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="https://modesens.com/banner/13892/getimg/?img=%2Fbanner%2F20221102-modesens-Anthropologie-1140x400-H-EN.jpg" alt=""></div>
+          
+          
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        
+      </div>
+    </div>
+
+    <div id="featured">
+        <h2>Featured Partners</h2>
+        <p>Compare across our 500+ partner stores to find the products you want at the best price.</p>
+    
+        <div class="cont">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-14 (1).png" alt=""></div>
+              <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-14 (2).png" alt=""></div>
+              <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-14.png" alt=""></div>
+              
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            
+          </div>
+        </div>
+    </div>
+<hr>
+    <div>
+      <h1 id="shop-women">Shop Women</h1>
+      <div id="women">
+      <div>
+       <img src="https://cdn.modesens.com/banner/20220919-W-Sale.jpg" alt="">
+       <p>SALE</p>
+      </div>
+      <div>
+        <img src="https://cdn.modesens.com/banner/20220919-W-New.jpg" alt="">
+        <p>NEW ARRIVALS</p>
+       </div>
+       <div>
+        <img src="https://cdn.modesens.com/banner/20220919-W-Jackets.jpg" alt="">
+        <p>JACKETS</p>
+       </div>
+       <div>
+        <img src="https://cdn.modesens.com/banner/20220919-W-Dresses.jpg" alt="">
+        <p>DRESSES</p>
+       </div>
+       <div>
+        <img src="https://cdn.modesens.com/banner/20220919-W-Tops.jpg" alt="">
+        <p>TOPS</p>
+       </div>
+       <div>
+        <img src="https://cdn.modesens.com/banner/20220919-W-Pants.jpg" alt="">
+        <p>PANTS</p>
+       </div>
+       <div>
+        <img src="https://cdn.modesens.com/banner/20220919-W-Shoes.jpg" alt="">
+        <p>SHOES</p>
+       </div>
+       <div>
+        <img src="https://cdn.modesens.com/banner/20220919-W-Bags.jpg" alt="">
+        <p>BAGS</p>
+       </div>
+       <div>
+        <img src="https://cdn.modesens.com/banner/20221207-W-PreOwned_1670402059.jpg" alt="">
+        <p>PRE-OWNED</p>
+       </div>
+      </div>
+   <hr>
+      <div id="new">
+        <h1 style="text-align: center;">New To Sale</h1>
+        <div id="newsale">
+          <div>
+            <img src="https://images.lvrcdn.com/Zoom76I/M7D/047_ae3e6114-1674-45e0-bfdd-2130e4520dfa.JPG" alt="">
+          <p class="line1">VERSACE</p>
+          <P class="line2">Macro Check Single breasted wool</P>
+          <p class="line3">$1499(40% OFF) <span class="rate">-$3875</span></p>
+          <p class="line4">Compare 6 Stores</p>
+          </div>
+          <div>
+            <img src="https://www.net-a-porter.com/variants/images/1647597286042508/in/w1000.jpg" alt="">
+          <p class="line1">A.L.C</p>
+          <P class="line2">Lincoln Oversized Faux Shearling Coat In Brown</P>
+          <p class="line3">$417(40% OFF) <span class="rate">-$695</span></p>
+          <p class="line4">Compare 6 Stores</p>
+          </div>
+
+          <div>
+            <img src="https://cdn.modesens.com/availability/40451438?w=400" alt="">
+          <p class="line1">VERSACE</p>
+          <P class="line2">155mm Platform Leather Ankle Boots In Black</P>
+          <p class="line3">$669(40% OFF)<span class="rate">-$1931</span> </p>
+          <p class="line4">Compare 14 Stores</p>
+          </div>
+          <div>
+            <img src="https://cdn.modesens.com/availability/40451438?w=400" alt="">
+          <p class="line1">TOTEME</p>
+          <P class="line2">Crocodile-effect Leather Over-the-knee Boots In Black Croco</P>
+          <p class="line3">$550(45% OFF) <span class="rate">-$1090</span></p>
+          <p class="line4">Compare 4 Stores</p>
+          </div>
+        </div><br>
+        <button id="btn">show more</button>
+      </div>
+      <hr>
+    <div>
+      <h1 style="text-align: center; padding-top: 10px;">Special Offers</h1>
+      <div class="offer">
+      <div class="cont">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15.png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (5).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (6).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (2).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (1).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-15 (2).png" alt=""></div>
+
+          </div>
+         
+          
+         
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+        </div>
+        </div>
+        <button id="btn"><a style="text-decoration: none;text-align: center;font-size: large;"href="women.html">show more</a></button>
+      </div>
+      
+      <hr>
+    <div class="trending">
+      <h1 style="text-align: center;">Trending Now</h1>
+      <div class="cont">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-14 (3).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-14 (5).png" alt=""></div>
+            <div class="swiper-slide"><img src="C:\Users\1996s\OneDrive\Pictures\Screenshots\2022-12-14 (4).png" alt=""></div>
+            
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+          
+        </div>
+      </div>
+      
+      <button id="show"><a style="text-decoration: none;"href="women.html">show more</a></button>
+    </div>
+<hr>
+    <div id="posts">
+      <h1 style="text-align: center; padding:10px 10px;">Community Posts</h1><br>
+      <div id="community">
+      <div>
+      <img src="https://cdn.modesens.com/umedia/1707018s?w=400" alt="">
+      </div>
+      <div>
+        <img src="https://cdn.modesens.com/umedia/1707030s?w=400" alt="">
+        </div>
+        <div>
+          <img src="https://cdn.modesens.com/umedia/1707011s?w=400" alt="">
+          </div>
+          <div>
+            <img src="https://cdn.modesens.com/umedia/1686127s?w=400" alt="">
+            </div>
+          </div>
+          <button>VIEW ALL</button>
+    </div>
+
+    <div id="install">
+      <div class="mobile">
+        
+        <h1>Download the<br>ModeSens App</h1>
+        <p>A seamless experience that takes your style to the next level.</p>
+        <button style="background-color: black; color: white; font-weight: bold;">DOWNLOAD NOW</button><br><br>
+        <img src="https://cdn.modesens.com/static/img/20220826appdownload_en.svg" alt="">
+      </div>
+      <div class="mobile">
+       
+        <h1>Install the ModeSens<br> Browser Extension</h1>
+        <p>Get timely, accurate product information every time you browse.</p>
+        <button style="background-color: black; color: white; font-weight: bold;">INSTALL NOW</button><br><br>
+        <img src="https://cdn.modesens.com/static/img/20211109downloadright.png" alt="">
+      </div>
+
+    </div>
+<hr>
+    <div class="bottom">
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">CUSTOMER CARE</p><br><br>
+      <p>Shopper Protection</p>
+      <p>Loyalty Program</p>
+      <p>Help Center</p>
+      <p>Size Guides</p>
+      <p>Contact Us / Feedback</p>
+      <p>Shipping / Returns</p>
+     </div>
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">INFORMATION</p><br><br>
+      <p>About Us</p>
+      <p>Influencer Program</p>
+      <p>Partner Stores</p>
+      <p>Sitemap</p>
+     </div>
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">LEGAL</p><br><br>
+      <p>Terms Of Use</p>
+      <p>Disclosure</p>
+      <p>Privacy Policy</p>
+      <p>Community Guidelines</p>
+     </div>
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">CONNECT WITH US</p><br><br>
+      <div style="display:flex;flex-direction: row;">
+        <img src="https://cdn.modesens.com/static/img/20220815download_ios.svg" alt="">
+       <img src="https://cdn.modesens.com/static/img/20220815download_android.svg" alt="">
+       <img src="https://cdn.modesens.com/static/img/20220815down_chromestrore.svg" alt="">
+      </div>
+     </div>
+     <div>
+      <p style="color: black;font-size: large; font-weight: 500;">NEWSLETTER SIGN UP</p><br><br>
+      <input type="email" placeholder="Email Adress">
+    <ul style="display:flex;flex-direction: row;">
+    <li>Women's</li>
+    <li>Men's</li>
+    <button>SUBMIT</button>
+    </ul> 
+    </div>
+  </div>
+  
+    <p style="text-align: center;color: gray;background-color:white">When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</p>
+    
+    <hr>
+
+    <div class="end">
+<div><img src="https://cdn.modesens.com/static/img/20220726Pinterest.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Twitter.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Ins.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Facebook.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Weibo.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Wechat.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Reddit.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220726Discord.svg" alt=""></div>
+<div><img src="https://cdn.modesens.com/static/img/20220811Xiaohongshu.svg" alt=""></div>
+</div>
+
+    </div><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+      const swiper = new Swiper('.swiper',{
+     autoplay:{
+      delay:5000,
+      disableOnInteraction:false,
+     },
+     
+  loop: true,
+
+ 
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+ 
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
+    </script>
+    
+</body>
+
+</html>
