@@ -1,6 +1,8 @@
+
 let cont=document.getElementById("product-container")
   let filterselect=document.getElementById("filter1");
   
+
 let fetcheddata=[];
 
   filterselect.addEventListener("change",()=>{
@@ -37,6 +39,7 @@ let fetcheddata=[];
 
  let card=document.createElement("div");
 
+
  let wish=document.createElement("div");
  let img=document.createElement("img");
   img.setAttribute("src","https://img.icons8.com/ios/2x/loading-heart.png"); 
@@ -45,11 +48,11 @@ let fetcheddata=[];
   image.setAttribute("src",element.image); 
 
   let brand=document.createElement("h3");
+
   brand.innerText=element.title;
 
   let price=document.createElement("h3");
   price.innerText="$"+element.price;
-
 
   let category=document.createElement("p");
   category.innerText=element.category;
@@ -59,6 +62,7 @@ let fetcheddata=[];
 
   let addtocart=document.createElement("button");
   addtocart.innerText="Add To Cart";
+
 
   img.addEventListener("click",()=>{
     img.src="https://img.icons8.com/emoji/2x/heart-suit.png";
@@ -78,6 +82,7 @@ let fetcheddata=[];
     alert("Product Added To Wishlist");
     }
   });
+
 
   addtocart.addEventListener("click",()=>{
 let cartdata=JSON.parse(localStorage.getItem("cart"))||[];
@@ -103,3 +108,5 @@ alert("Product Already in Cart")
   cont.append(card);
   })
 }
+
+
