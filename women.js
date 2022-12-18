@@ -1,7 +1,8 @@
 
-    // Write all necessery JS here 
-    let cont=document.getElementById("product-container")
+let cont=document.getElementById("product-container")
   let filterselect=document.getElementById("filter1");
+  
+
 let fetcheddata=[];
 
   filterselect.addEventListener("change",()=>{
@@ -38,17 +39,20 @@ let fetcheddata=[];
 
  let card=document.createElement("div");
 
+
+ let wish=document.createElement("div");
+ let img=document.createElement("img");
+  img.setAttribute("src","https://img.icons8.com/ios/2x/loading-heart.png"); 
+
   let image=document.createElement("img");
   image.setAttribute("src",element.image); 
 
-  let brand=document.createElement("h2");
+  let brand=document.createElement("h3");
+
   brand.innerText=element.title;
 
   let price=document.createElement("h3");
   price.innerText="$"+element.price;
-
-//   let description=document.createElement("p");
-//  description.innerText=element.description;
 
   let category=document.createElement("p");
   category.innerText=element.category;
@@ -58,6 +62,27 @@ let fetcheddata=[];
 
   let addtocart=document.createElement("button");
   addtocart.innerText="Add To Cart";
+
+
+  img.addEventListener("click",()=>{
+    img.src="https://img.icons8.com/emoji/2x/heart-suit.png";
+    let wishlist=JSON.parse(localStorage.getItem("wishlist"))||[];
+    isalready=false;
+    for(j=0;j<wishlist.length;j++){
+      if(wishlist[j].id===element.id){
+        isalready=true;
+        break;
+      };
+    }
+    if(isalready===true){
+      alert("Product Already in wishlist");
+    }else{
+    wishlist.push(element);
+    localStorage.setItem("wishlist",JSON.stringify(wishlist));
+    alert("Product Added To Wishlist");
+    }
+  });
+
 
   addtocart.addEventListener("click",()=>{
 let cartdata=JSON.parse(localStorage.getItem("cart"))||[];
@@ -77,9 +102,11 @@ alert("Product Already in Cart")
   alert("Product Added To Cart")
 }
 
-  })
-
-  card.append(image,brand,price,category,rating,addtocart);
+  });
+  wish.append(img);
+  card.append(wish,image,brand,price,category,rating,addtocart);
   cont.append(card);
   })
 }
+
+

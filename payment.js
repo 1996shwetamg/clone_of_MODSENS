@@ -5,4 +5,6 @@ key.addEventListener("click",()=>{
     alert("PLEASE ENTER OTP");
     
     window.location="happyshopping.html"
+
 })
+
